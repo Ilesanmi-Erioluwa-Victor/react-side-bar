@@ -1,9 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
-type Props = {};
-
-const DashboardLayout = (props: Props) => {
-  return <div>DashboardLayout..</div>;
+const DashboardLayout = () => {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 };
 
 export default DashboardLayout;
