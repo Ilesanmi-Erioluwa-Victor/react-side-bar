@@ -25,6 +25,7 @@ const Sidebar = () => {
           boxSizing: "border-box",
           borderRight: "0px",
           backgroundColor: colorConfigs.sidebar.bg,
+          color : colorConfigs.sidebar.color
         },
       }}
     >
