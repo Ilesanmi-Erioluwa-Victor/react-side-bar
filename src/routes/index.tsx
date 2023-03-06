@@ -14,6 +14,15 @@ const generateRoute = (routes: RouteType[]): ReactNode => {
                     {route.element}
                     </PageWrapper>}
             />
+        ) : (
+                <Route
+                    path={route.path}
+                    element={
+                        
+                    }
+                >
+
+                </Route>
         )
     ))
 }
