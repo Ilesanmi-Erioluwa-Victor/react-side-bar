@@ -2,8 +2,8 @@ import React from "react";
 
 type Props = {};
 
-const SassPage = (props: Props) => {
+const SaasPage = (props: Props) => {
   return <div>SassPage..</div>;
 };
 
-export default SassPage;
+export default SaasPage;

@@ -4,11 +4,14 @@ import {
   ListItemIcon,
   ListItemText,
   Typography,
+  Collapse,
+  List,
 } from "@mui/material";
 import { RouteType } from "routes/config";
 import colorConfigs from "config/colorConfigs";
 import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
 import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
+import SidebarItem from "./SidebarItem";
 
 type Props = {
   item: RouteType;
@@ -42,6 +45,28 @@ const SidebarItemCollapse = ({ item }: Props) => {
         />
         {open ? <ExpandLessOutlinedIcon /> : <ExpandMoreOutlinedIcon />}
       </ListItemButton>
+      <Collapse
+        in={open}
+        timeout={"auto"}
+      >
+        <List>
+          {item?.child?.map((route, index) =>
+            route.sidebarProps ? (
+              route?.child ? (
+                <SidebarItemCollapse
+                  item={route}
+                  key={index}
+                />
+              ) : (
+                <SidebarItem
+                  item={route}
+                  key={index}
+                />
+              )
+            ) : null
+          )}
+        </List>
+      </Collapse>
     </>
   ) : null;
 };
