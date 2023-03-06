@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Drawer,
-  List,
-  Toolbar,
-  Stack,
-  Avatar,
-  ListItemButton,
-  ListItemIcon,
-} from "@mui/material";
+import { Drawer, List, Toolbar, Stack, Avatar } from "@mui/material";
 import sizeConfigs from "config/sizeConfigs";
 import assets from "assets";
 import colorConfigs from "config/colorConfigs";
 import appRoutes from "routes/appRoutes";
+import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
   return (
@@ -25,12 +18,12 @@ const Sidebar = () => {
           boxSizing: "border-box",
           borderRight: "0px",
           backgroundColor: colorConfigs.sidebar.bg,
-          color : colorConfigs.sidebar.color
+          color: colorConfigs.sidebar.color,
         },
       }}
     >
       <List disablePadding>
-        <Toolbar>
+        <Toolbar sx={{ marginBottom: "20px" }}>
           <Stack
             sx={{ width: "100%" }}
             direction="row"
@@ -40,12 +33,7 @@ const Sidebar = () => {
           </Stack>
         </Toolbar>
         {appRoutes.map((route, index) =>
-          route.sidebarProps ? (
-            <ListItemButton>
-              <ListItemIcon>{route?.sidebarProps?.icon}</ListItemIcon>
-              {route.sidebarProps.displayText}
-            </ListItemButton>
-          ) : null
+          route.sidebarProps ? <SidebarItem item={route} /> : null
         )}
       </List>
     </Drawer>
