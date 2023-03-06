@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ListItemButton, ListItemIcon } from "@mui/material";
-import { Link } from "react-router-dom";
 import { RouteType } from "routes/config";
 import colorConfigs from "config/colorConfigs";
 
@@ -14,8 +13,7 @@ const SidebarItemCollapse = ({ item }: Props) => {
   return item?.sidebarProps ? (
     <>
       <ListItemButton
-        component={Link}
-        to={item?.path}
+        onClick={() => setOpen(!open)}
         sx={{
           "&: hover": {
             backgroundColor: colorConfigs.sidebar.hoverBg,
