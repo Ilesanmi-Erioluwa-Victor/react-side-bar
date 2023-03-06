@@ -1,12 +1,16 @@
 import React from 'react'
+import { Drawer } from "@mui/material"
 
-type Props = {}
-
-const Sidebar = (prop : Props) => {
+const Sidebar = () => {
   return (
-    <div>
+    <Drawer
+      variant='permanent'
+      sx={{
+        
+      }}
+    >
       Sidebar
-    </div>
+    </Drawer>
   )
 }
 

@@ -31,7 +31,7 @@ const appRoutes: RouteType[] = [
       },
       {
         index: true,
-        element: <DefaultPage />,
+        element: <DashboardIndex />,
         state: "dashboard.index",
       },
     ],
