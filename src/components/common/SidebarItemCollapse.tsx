@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ListItemButton, ListItemIcon } from "@mui/material";
+import { ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import { RouteType } from "routes/config";
 import colorConfigs from "config/colorConfigs";
 
@@ -28,7 +28,15 @@ const SidebarItemCollapse = ({ item }: Props) => {
           }}
         >
           {item?.sidebarProps?.icon}
-        </ListItemIcon>
+              </ListItemIcon>
+              <ListItemText 
+          disableTypography
+          primary={
+            <Typography>
+              
+            </Typography>
+          }
+        />
         {item.sidebarProps.displayText}
       </ListItemButton>
     </>
