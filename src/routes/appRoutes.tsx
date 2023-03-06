@@ -1,10 +1,11 @@
+import { FormatListBulletedOutlined, DashboardOutlinedIcon } from "@mui/icons-material";
+import { RouteType } from "./config";
+
 import HomePage from "pages/Home/HomePage";
 import DashboardLayout from "pages/Dashboard/DashboardLayout";
-
-import { RouteType } from "./config";
-import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
 import DefaultPage from "pages/Dashboard/DefaultPage";
 import DashboardIndex from "pages/Dashboard/DashboardIndex";
+import Changelog from "pages/Changelog/Changelog";
 
 const appRoutes: RouteType[] = [
   {
@@ -35,6 +36,16 @@ const appRoutes: RouteType[] = [
         state: "dashboard.index",
       },
     ],
+  },
+
+  {
+    path : "/changelog",
+    state: "changelog",
+    element: <Changelog />,
+    sidebarProps: {
+      displayText : "Changelog",
+      icon : 
+    }
   },
 ];
 

@@ -1,7 +1,17 @@
 import React from "react";
-import { Drawer, List, Toolbar, Stack, Avatar } from "@mui/material";
+import {
+  Drawer,
+  List,
+  Toolbar,
+  Stack,
+  Avatar,
+  ListItemButton,
+  ListItemIcon,
+} from "@mui/material";
 import sizeConfigs from "config/sizeConfigs";
 import assets from "assets";
+import colorConfigs from "config/colorConfigs";
+import appRoutes from "routes/appRoutes";
 
 const Sidebar = () => {
   return (
@@ -12,7 +22,9 @@ const Sidebar = () => {
         flexShrink: 0,
         "& .MuiDrawer-paper": {
           width: sizeConfigs.sidebar.width,
-          boxSizing : "border-box"
+          boxSizing: "border-box",
+          borderRight: "0px",
+          backgroundColor: colorConfigs.sidebar.bg,
         },
       }}
     >
@@ -26,6 +38,14 @@ const Sidebar = () => {
             <Avatar src={assets.images.logo} />
           </Stack>
         </Toolbar>
+        {appRoutes.map((route, index) =>
+          route.sidebarProps ? (
+            <ListItemButton>
+              <ListItemIcon>{route?.sidebarProps?.icon}</ListItemIcon>
+              {route.sidebarProps.displayText}
+            </ListItemButton>
+          ) : null
+        )}
       </List>
     </Drawer>
   );
