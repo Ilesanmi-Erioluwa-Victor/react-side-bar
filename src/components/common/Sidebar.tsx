@@ -1,6 +1,7 @@
 import React from 'react'
-import { Drawer } from "@mui/material"
+import { Drawer,List, Toolbar, Stack, Avatar} from "@mui/material"
 import sizeConfigs from 'config/sizeConfigs'
+import assets from 'assets'
 
 const Sidebar = () => {
   return (
@@ -11,7 +12,12 @@ const Sidebar = () => {
         flexShrink : 0
       }}
     >
-      Sidebar
+      <List disablePadding>
+        <Toolbar />
+        <Stack sx = {{}}>
+           <Avatar src={assets.images.logo} />
+        </Stack>
+      </List>
     </Drawer>
   )
 }
