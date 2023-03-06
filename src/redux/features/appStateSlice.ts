@@ -8,4 +8,10 @@ const initialState: appState = {
   appState: "",
 };
 
-e
+export const appStateSlice = createSlice({
+    name: "appState",
+    initialState,
+    reducers: {
+        setAppState : (state, action: PayloadAction)
+    }
+})
