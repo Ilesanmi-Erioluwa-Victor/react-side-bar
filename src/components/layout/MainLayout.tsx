@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import Topbar from "components/common/Topbar";
 import sizeConfigs from "config/sizeConfigs";
 import Sidebar from "components/common/Sidebar";
+import colorConfigs from "config/colorConfigs";
 
 const MainLayout = () => {
   return (
@@ -18,10 +19,18 @@ const MainLayout = () => {
         <Sidebar />
       </Box>
 
-      <Box>
+      <Box
+        component={"main"}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: `calc(100% - ${sizeConfigs.sidebar.width})`,
+          minHeight: "100vh",
+          backgroundColor: colorConfigs.mainBg,
+        }}
+      >
 
       </Box>
-      
     </Box>
   );
 };
