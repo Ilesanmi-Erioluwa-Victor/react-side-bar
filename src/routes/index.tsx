@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Route } from "react-router-dom";
 import { RouteType } from "./config";
 import PageWrapper from "components/layout/PageWrapper";
+import appRoutes from "./appRoutes";
 
 const generateRoute = (routes: RouteType[]): ReactNode => {
   return routes.map((route, index) =>
@@ -27,3 +28,6 @@ const generateRoute = (routes: RouteType[]): ReactNode => {
     )
   );
 };
+
+
+export const routes : ReactNode = generateRoute(appRoutes)
