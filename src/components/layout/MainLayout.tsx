@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import { Box, Toolbar } from "@mui/material";
 import Topbar from "components/common/Topbar";
 import sizeConfigs from "config/sizeConfigs";
@@ -30,6 +31,7 @@ const MainLayout = () => {
         }}
       >
         <Toolbar />
+        <Outlet />
       </Box>
     </Box>
   );
