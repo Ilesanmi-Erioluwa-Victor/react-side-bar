@@ -1,4 +1,5 @@
-import { FormatListBulletedOutlined, DashboardOutlinedIcon } from "@mui/icons-material";
+import DashboardOutlinedIcon from "@mui/icons-material/DashboardOutlined";
+import { FormatListBulletedOutlined } from "@mui/icons-material";
 import { RouteType } from "./config";
 
 import HomePage from "pages/Home/HomePage";
@@ -39,13 +40,13 @@ const appRoutes: RouteType[] = [
   },
 
   {
-    path : "/changelog",
+    path: "/changelog",
     state: "changelog",
     element: <Changelog />,
     sidebarProps: {
-      displayText : "Changelog",
-      icon : 
-    }
+      displayText: "Changelog",
+      icon: <FormatListBulletedOutlined />,
+    },
   },
 ];
 
