@@ -1,11 +1,19 @@
 import { ReactNode } from "react";
 import { Route } from "react-router-dom";
 import { RouteType } from "./config";
+import PageWrapper from "components/layout/PageWrapper";
 
 const generateRoute = (routes: RouteType[]): ReactNode => {
     return routes.map((route, index) => (
         route.index ? (
-            <Route></Route>
+            <Route 
+                index
+                path={route.path}
+                element={<PageWrapper state={route.state}>
+                    
+                    {route.element}
+                    </PageWrapper>}
+            />
         )
     ))
 }
