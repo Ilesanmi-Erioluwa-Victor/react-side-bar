@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import Topbar from "components/common/Topbar";
 import sizeConfigs from "config/sizeConfigs";
 import Sidebar from "components/common/Sidebar";
@@ -29,7 +29,7 @@ const MainLayout = () => {
           backgroundColor: colorConfigs.mainBg,
         }}
       >
-
+        <Toolbar />
       </Box>
     </Box>
   );
