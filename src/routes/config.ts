@@ -1,4 +1,8 @@
 import { ReactNode } from 'react';
 export type RouteType = {
-    element :  ReactNode,
+    element: ReactNode,
+    state: string,
+    index?: string,
+    path?: string,
+    child? : RouteType[],
 }
