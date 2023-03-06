@@ -1,9 +1,15 @@
 import React from "react";
+import { AppBar } from "@mui/material";
+import sizeConfigs from "config/sizeConfigs";
 
-type Props = {};
+const Topbar = () => {
+  return (<AppBar
+    position="fixed"
+    sx ={{width : `calc(100% - ${sizeConfigs.sidebar.width})`}}
+  >
 
-const Topbar = (prop: Props) => {
-  return <div>Topbar</div>;
+
+  </AppBar>);
 };
 
 export default Topbar;
