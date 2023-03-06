@@ -1,8 +1,7 @@
 import React from "react";
+import {Box }
 
-type Props = {};
-
-const MainLayout = (props: Props) => {
+const MainLayout = () => {
   return <div>MainLayout</div>;
 };
 
