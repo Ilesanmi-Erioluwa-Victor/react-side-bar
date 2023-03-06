@@ -33,11 +33,11 @@ const SidebarItemCollapse = ({ item }: Props) => {
           disableTypography
           primary={
             <Typography>
-              
+               {item.sidebarProps.displayText}
             </Typography>
           }
         />
-        {item.sidebarProps.displayText}
+       { open ? }
       </ListItemButton>
     </>
   ) : null;
