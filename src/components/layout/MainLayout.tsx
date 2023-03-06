@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import Topbar from "components/common/Topbar";
 import sizeConfigs from "config/sizeConfigs";
+import Sidebar from "components/common/Sidebar";
 
 const MainLayout = () => {
   return (
@@ -11,8 +12,16 @@ const MainLayout = () => {
         component={"nav"}
         sx={{
           width: sizeConfigs.sidebar.width,
-        flexShrink : 0}}
-      ></Box>
+          flexShrink: 0,
+        }}
+      >
+        <Sidebar />
+      </Box>
+
+      <Box>
+
+      </Box>
+      
     </Box>
   );
 };
