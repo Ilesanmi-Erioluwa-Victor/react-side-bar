@@ -5,6 +5,7 @@ import assets from "assets";
 import colorConfigs from "config/colorConfigs";
 import appRoutes from "routes/appRoutes";
 import SidebarItem from "./SidebarItem";
+import SidebarItemCollapse from "./SidebarItemCollapse";
 
 const Sidebar = () => {
   return (
@@ -33,7 +34,19 @@ const Sidebar = () => {
           </Stack>
         </Toolbar>
         {appRoutes.map((route, index) =>
-          route.sidebarProps ? <SidebarItem item={route} /> : null
+          route.sidebarProps ? (
+            route?.child ? (
+              <SidebarItemCollapse
+                item={route}
+                key={index}
+              />
+            ) : (
+              <SidebarItem
+                item={route}
+                key={index}
+              />
+            )
+          ) : null
         )}
       </List>
     </Drawer>
