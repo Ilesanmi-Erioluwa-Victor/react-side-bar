@@ -14,7 +14,10 @@ const Sidebar = () => {
     >
       <List disablePadding>
         <Toolbar />
-        <Stack sx = {{}}>
+        <Stack sx={{ width: "100%", }}
+          direction="row"
+          justifyContent="center"
+        >
            <Avatar src={assets.images.logo} />
         </Stack>
       </List>
