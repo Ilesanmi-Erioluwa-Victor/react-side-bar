@@ -3,7 +3,4 @@ This is a redux-toolkit, typescript,react and Mui Project with easy animation on
 which also shows or alight the background of current selected menu item on the menu bar
 
 ### STACK USED ARE :
--Reactjs
-*Mui
-*Typescript
--Redux-toolkit
+*Reactjs*Mui*Typescript*Redux-toolkit
